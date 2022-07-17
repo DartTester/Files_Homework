@@ -3,22 +3,23 @@ package guru.qa;
 import com.codeborne.pdftest.PDF;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.xlstest.XLS;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import com.opencsv.CSVReader;
-import com.opencsv.exceptions.CsvException;
-import org.junit.jupiter.api.Disabled;
+
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.shadow.com.univocity.parsers.csv.CsvParser;
 
 import java.io.File;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
 import java.util.List;
+import java.util.Map;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
 
 import static com.codeborne.selenide.Selenide.$;
 import static java.nio.charset.StandardCharsets.UTF_8;
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 //
 public class FilesParseTest {
