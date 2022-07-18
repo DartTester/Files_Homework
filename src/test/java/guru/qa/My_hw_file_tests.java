@@ -23,7 +23,7 @@ public class My_hw_file_tests {
 
     @DisplayName("check PDF file from zip")
     @Test
-    void pdfTest() throws Exception {
+    void checkPdfTest() throws Exception {
 
         ZipFile zipFile = new ZipFile(Objects.requireNonNull(classLoader.getResource("zip_archiv.zip")).getFile());
         ZipEntry entry = zipFile.getEntry("pdf_sample.pdf");
@@ -36,7 +36,7 @@ public class My_hw_file_tests {
 
     @DisplayName("check XLS file from zip")
     @Test
-    void checkXLSTest() throws Exception {
+    void checkXlsTest() throws Exception {
 
         ZipFile zipFile = new ZipFile(Objects.requireNonNull(classLoader.getResource("zip_archiv.zip")).getFile());
         ZipEntry entry = zipFile.getEntry("xls_drivers.xlsx");
@@ -49,7 +49,7 @@ public class My_hw_file_tests {
 
     @DisplayName("check CSV file from zip")
     @Test
-    void csvTest() throws Exception {
+    void checkCsvTest() throws Exception {
         //с помощью класс лоудера ищем зип
         ZipFile zipFile = new ZipFile(Objects.requireNonNull(classLoader.getResource("zip_archiv.zip")).getFile());
         //достаем нужный файл в зипе

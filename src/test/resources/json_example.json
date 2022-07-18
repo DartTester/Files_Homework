@@ -1,0 +1,18 @@
+{
+"userId": "d397afca-1978-4416-b3e0-6e5a18d613b0",
+"clientId": "d225892d-e322-4109-a223-23176a36146f",
+"surname": "Testerov",
+"name": "Tester",
+"patronymic": "Testerovich",
+"age": 27,
+"email": "test@test.ru",
+"number": {
+  "phoneNum": 12345,
+  "homeNum": 1234567,
+  "workNum": 123456789
+},
+"UpdatedAt":"2022-06-03T11:00:45.9868592+00:00",
+"updatedBy": "Tester",
+"isArchived": true,
+"isClosed": false
+}
