@@ -60,13 +60,23 @@ public class FilesParseTest {
     }
 
     @Test
-    void zipTest() {
-
-    }
+        void zipTest () throws Exception {
+            InputStream is = classLoader.getResourceAsStream("sample-zip-file.zip");
+            ZipInputStream zis = new ZipInputStream(is);
+            ZipEntry entry;
+            while ((entry = zis.getNextEntry()) != null) {
+                assertThat(entry.getName()).isEqualTo("sample.txt");
+            }
+        }
 
     @Test
     void jsonTest() {
-
+        InputStream is = classLoader.getResourceAsStream("teacher.json");
+        Gson gson = new Gson();
+        JsonObject jsonObject = gson.fromJson(new InputStreamReader(is), JsonObject.class);
+        assertThat(jsonObject.get("name").getAsString()).isEqualTo("Dmitrii");
+        assertThat(jsonObject.get("isGoodTeacher").getAsBoolean()).isEqualTo(true);
+        assertThat(jsonObject.get("passport").getAsJsonObject().get("number").getAsInt()).isEqualTo(1234);
     }
 
 

@@ -1,0 +1,8 @@
+{
+  "name": "Daniil",
+  "isGoodTeacher": true,
+  "age": 27,
+  "passport": {
+    "number": 1234
+  }
+}
