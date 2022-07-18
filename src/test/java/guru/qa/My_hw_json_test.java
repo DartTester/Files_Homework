@@ -39,7 +39,7 @@ public class My_hw_json_test {
         //вызываем readTree с джейсоном как параметром
         JsonNode jsonNode = objectMapper.readTree(new InputStreamReader(inputStream));
 
-        //проверка содержимого
+        //проверка содержимого файла
         assertThat(jsonNode.get("name").asText()).isEqualTo("Tester");
         assertThat(jsonNode.get("age").asInt()).isEqualTo(27);
         assertThat(jsonNode.get("isClosed").asBoolean()).isEqualTo(false);
